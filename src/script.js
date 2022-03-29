@@ -14,7 +14,7 @@ function formatDate(Date) {
     "Friday",
     "Saturday",
   ];
-  let dayOfWeek = days[now.getDay()];
+  //let dayOfWeek = days[now.getDay()];
 
   let months = [
     "January",
