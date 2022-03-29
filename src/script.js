@@ -55,8 +55,8 @@ function formatDate(Date) {
   }
 
   let currentDate = `Last updated: ${currentMonth} ${currentDay} - ${hour}:${minutes} ${dayOrNight}`;
-  let currentDateTime = document.querySelector("#current-time");
-  currentDateTime.innerHTML = `${currentDate}`;
+  let lastUpdated = document.querySelector("#last-updated");
+  lastUpdated.innerHTML = `${currentDate}`;
 }
 formatDate();
 
