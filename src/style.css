@@ -1,0 +1,349 @@
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  transition: 0.3s ease;
+  background-image: var(--background-image);
+  color: var(--text-color);
+}
+
+:root {
+  --background-image: linear-gradient(to right, #f5f5ff 0%, #c9c6ec 100%);
+  --text-color: #190923;
+  --background-color: #fff;
+  --box-shadow: 0px 10px 30px rgb(128 128 128 / 0.7);
+  --border-card: 1px solid #fff;
+  --background-boxes: #f5f5ff;
+  --button-color: #c9c6ec;
+  --button-color-2: #dfdff8;
+  --link-color: #9081a7;
+  --border-mode: 1px solid #c9c6ec;
+}
+
+html[data-theme="dark"] {
+  --text-color: #dfdff8;
+  --background-image: linear-gradient(
+    to right,
+    rgb(25, 9, 35) 0%,
+    rgb(72, 60, 90) 50%,
+    rgb(25, 9, 35) 100%
+  );
+  --background-color: #0b040f;
+  --box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  --border-card: 1px solid #190923;
+  --background-boxes: #483c5a;
+  --button-color: #190923;
+  --button-color-2: #483c5a;
+  --link-color: #9081a7;
+  --border-mode: 1px solid #190923;
+}
+
+form {
+  text-align: center;
+  padding: 30px;
+}
+
+.searchBar {
+  border: var(--border-card);
+  background-color: var(--background-color);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: 0.3s ease;
+}
+
+.searchBar {
+  border-radius: 15px 15px 3px 3px;
+}
+
+::placeholder {
+  color: var(--text-color);
+}
+
+.weatherToday {
+  border-radius: 3px;
+  background-color: var(--background-color);
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: var(--box-shadow);
+}
+.forecastWeek {
+  border-radius: 3px;
+  background-color: var(--background-color);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.card1,
+.card2,
+.card3 {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  width: 100%;
+  max-width: 800px;
+}
+.card3 {
+  background-color: var(--background-color);
+  height: 230px;
+  width: 790px;
+  border-radius: 3px 3px 15px 15px;
+  margin-top: 6px;
+  box-shadow: var(--box-shadow);
+  color: var(--text-color);
+}
+
+input {
+  border: var(--border-card);
+  border-radius: 5px;
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+.city {
+  width: 400px;
+  padding: 10px;
+  background-color: var(--background-boxes);
+  transition: 0.3s ease;
+}
+
+.search,
+.location,
+.darkMode,
+.lightMode {
+  background-color: var(--button-color);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.search,
+.location {
+  position: relative;
+  top: 3px;
+  border: var(--border-card);
+  color: var(--button-color-3);
+  width: 46px;
+  height: 46px;
+  transition: 0.3s ease;
+}
+
+.darkMode,
+.lightMode {
+  border: var(--border-mode);
+  color: var(--button-color-2);
+  padding: 5px;
+  width: 110px;
+  margin: 2px;
+  transition: 0.3s ease;
+}
+
+.modes {
+  display: flex;
+  justify-content: center;
+}
+
+.search:hover,
+.location:hover {
+  background-color: var(--button-color-2);
+  color: var(--button-color);
+  transition: 0.3s ease;
+}
+
+.darkMode:hover,
+.lightMode:hover {
+  background-color: var(--button-color);
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h5,
+ul,
+.others {
+  text-align: center;
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.mainIcon {
+  display: inline;
+  margin: 0 auto;
+  width: 150px;
+  vertical-align: middle;
+}
+
+.material-icons-round,
+.material-icons-sharp {
+  font-family: "Material Icons";
+  font-weight: lighter;
+  font-size: 20px;
+  color: #fff;
+}
+
+h1 {
+  font-size: 80px;
+  display: inline;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+h2 {
+  display: inline;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+a {
+  display: inline;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+.active {
+  color: var(--text-color);
+  cursor: default;
+  font-size: 22px;
+  transition: 0.3s ease;
+}
+
+.active:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0px 10px;
+  margin: 0 auto;
+}
+
+.humidity,
+.wind {
+  display: block;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--background-boxes);
+  background-color: var(--background-boxes);
+  border-radius: 7px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+  position: relative;
+  top: 15px;
+}
+
+.sunrise,
+.sunset {
+  display: block;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--background-boxes);
+  background-color: var(--background-boxes);
+  border-radius: 7px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.humidity {
+  margin: auto;
+  margin-right: 10px;
+}
+
+.wind {
+  margin: auto;
+  margin-left: 10px;
+}
+
+.sunrise {
+  margin: auto;
+  margin-left: 10px;
+  position: relative;
+  left: 48px;
+}
+.sunset {
+  margin: auto;
+  margin-left: 10px;
+}
+
+.humidity-value,
+.wind-value {
+  font-size: 25px;
+}
+
+.sunrise-value,
+.sunset-value {
+  font-size: 25px;
+}
+
+.others {
+  padding: 0px 10px;
+}
+
+.forecast-date {
+  font-size: 15px;
+}
+
+.forecast-temperature {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.forecastWeek {
+  padding: 50px 100px;
+}
+
+.icon {
+  width: 60px;
+}
+
+.maxTemperature,
+.maxTemperatures {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.minTemperature,
+.minTemperatures {
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+.code {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+.links {
+  display: inline;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.links:hover {
+  text-decoration: underline;
+  color: var(--text-color);
+}
