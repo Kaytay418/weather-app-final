@@ -118,17 +118,22 @@ function getForecastWeek(coord) {
 // Sunrise and Sunset Functions//
 function formatSunriseTime(timestamp) {
   let time = new Date(timestamp);
-  let hours = time.getHours();
+  let hour = hours12();
+
+  function hours12() {
+    return (time.getHours() + 24) % 12 || 12;
+  }
+
   let minutes = time.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-  return `${hours}:${minutes}`;
+  return `${hour}:${minutes}`;
 }
 function formatSunsetTime(timestamp) {
   let time = new Date(timestamp);
-  let hours = hours12();
+  let hour = hours12();
 
   function hours12() {
     return (time.getHours() + 24) % 12 || 12;
